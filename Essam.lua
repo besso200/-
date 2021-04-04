@@ -2821,10 +2821,10 @@ end
 send(msg.chat_id_, msg.id_,Text) 
 end
 ------------------------------------------------------------------------
-if text == "مسح الميديا" or text == "تنظيف التعديل" and Manager(msg) then
+if text == "مسح" or text == "تنظيف" and Manager(msg) then
 msgm = {[0]=msg.id_}
 local Message = msg.id_
-for i=1,100 do
+for i=1,250 do
 Message = Message - 1048576
 msgm[i] = Message
 end
@@ -2834,17 +2834,17 @@ msgm2 = {}
 for i=0 ,data.total_count_ do
 if data.messages_[i] and data.messages_[i].content_ and data.messages_[i].content_.ID ~= "MessageText" then
 msgm2[new] = data.messages_[i].id_
-new = new + 1
+new = new + 1 + 1 + 1 + 1 + 1 +1 + 1
 end
 end
 DeleteMessage(msg.chat_id_,msgm2)
 end,nil)  
-send(msg.chat_id_, msg.id_,"❏︙تم ازالة 100 من وسائط 🔰")
+send(msg.chat_id_, msg.id_,"❏︙تم ازالة 250 من وسائط 🔰")
 end
-if text == "مسح التعديل" or text == "تنظيف التعديل" and  Manager(msg) then
+if text == "مسح" or text == "تنظيف" and  Manager(msg) then
 Msgs = {[0]=msg.id_}
 local Message = msg.id_
-for i=1,100 do
+for i=1,250 do
 Message = Message - 1048576
 Msgs[i] = Message
 end
@@ -2854,12 +2854,12 @@ Msgs2 = {}
 for i=0 ,data.total_count_ do
 if data.messages_[i] and (not data.messages_[i].edit_date_ or data.messages_[i].edit_date_ ~= 0) then
 Msgs2[new] = data.messages_[i].id_
-new = new + 1
+new = new + 1 + 1 + 1 + 1 + 1 +1 + 1
 end
 end
 DeleteMessage(msg.chat_id_,Msgs2)
 end,nil)  
-send(msg.chat_id_, msg.id_,'❏︙تم ازالة 100 رساله معدلة 🔰')
+send(msg.chat_id_, msg.id_,'❏︙تم ازالة 250 رساله معدلة 🔰')
 end
 if text == "تغير اسم البوت" or text == "تغيير اسم البوت" then 
 if SudoBot(msg) then

@@ -2821,7 +2821,7 @@ end
 send(msg.chat_id_, msg.id_,Text) 
 end
 ------------------------------------------------------------------------
-if text == "تنظيف الميديا" and Manager(msg) then
+if text == "مسح الميديا" and Manager(msg) then
 msgm = {[0]=msg.id_}
 local Message = msg.id_
 for i=1,100 do
@@ -2841,7 +2841,7 @@ DeleteMessage(msg.chat_id_,msgm2)
 end,nil)  
 send(msg.chat_id_, msg.id_,"❏︙تم ازالة 100 من وسائط 🔰")
 end
-if text == "تنظيف التعديل" and Manager(msg) then
+if text == "مسح التعديل" and Manager(msg) then
 Msgs = {[0]=msg.id_}
 local Message = msg.id_
 for i=1,100 do
@@ -3102,6 +3102,9 @@ Text = [[
 تنزيل منضف
 المنظفين
 مسح المنظفين
+
+مسح الميديا
+مسح التعديل
 ————————————————
 ❏︙ CH ➥ [𝑩𝒆𝒔𝒔𝒐 𝒔𝒐𝒓𝒖𝒄𝒆](t.me/Essam500K)
 ]]

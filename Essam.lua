@@ -2834,7 +2834,7 @@ msgm2 = {}
 for i=0 ,data.total_count_ do
 if data.messages_[i] and data.messages_[i].content_ and data.messages_[i].content_.ID ~= "MessageText" then
 msgm2[new] = data.messages_[i].id_
-new = new + 1 + 1 + 1 + 1 + 1 +1 + 1
+new = new + 1 
 end
 end
 DeleteMessage(msg.chat_id_,msgm2)
@@ -2854,7 +2854,7 @@ Msgs2 = {}
 for i=0 ,data.total_count_ do
 if data.messages_[i] and (not data.messages_[i].edit_date_ or data.messages_[i].edit_date_ ~= 0) then
 Msgs2[new] = data.messages_[i].id_
-new = new + 1 + 1 + 1 + 1 + 1 +1 + 1
+new = new + 1 
 end
 end
 DeleteMessage(msg.chat_id_,Msgs2)

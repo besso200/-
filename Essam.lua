@@ -2970,11 +2970,9 @@ DeleteMessage(msg.chat_id_,Msgs2)
 end,nil)  
 send(msg.chat_id_, msg.id_,'❏︙تم ازالة 100 رساله معدلة 🔰')
 end
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-end -- Chat_Type = 'GroupBot' 
-end -- end msg
-end --end 
---------------------------------------------------------------------------------------------------------------
+
+
+
 function tdcli_update_callback(data)  -- clback
 if data.ID == "UpdateChannel" then 
 if data.channel_.status_.ID == "ChatMemberStatusKicked" then 
@@ -3119,8 +3117,8 @@ local mem_id = msg.content_.members_
 local Bots = database:get(bot_id.."lock:Bot:kick"..msg.chat_id_) 
 for i=0,#mem_id do  
 if msg.content_.members_[i].type_.ID == "UserTypeBot" and not Mod(msg) and Bots == "del" then   
-Essam = https.request("https://api.telegram.org/bot"..token.."/kickChatMember?chat_id="..msg.chat_id_.."&user_id="..mem_id[i].id_)
-local Json_Info = JSON.decode(Essam)
+BESSO = https.request("https://api.telegram.org/bot"..token.."/kickChatMember?chat_id="..msg.chat_id_.."&user_id="..mem_id[i].id_)
+local Json_Info = JSON.decode(BESSO)
 if Json_Info.ok == true and #mem_id == i then
 local Msgs = {}
 Msgs[0] = msg.id_
@@ -3153,7 +3151,7 @@ return false
 end    
 end   
 --------------------------------------------------------------------------------------------------------------
-SourceEssam(data.message_,data)
+SourceBESSO(data.message_,data)
 --------------------------------------------------------------------------------------------------------------
 if Chat_Type == 'GroupBot' and ChekAdd(msg.chat_id_) == true then
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
@@ -3306,13 +3304,13 @@ return false
 end 
 end
 ------------------------------------------------------------------------
-local Essambot = database:get(bot_id.."Add:Filter:Rp2"..text..result.chat_id_)   
-if Essambot then    
+local BESSObot = database:get(bot_id.."Add:Filter:Rp2"..text..result.chat_id_)   
+if BESSObot then    
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 if data.username_ ~= false then
-send(msg.chat_id_,0,"❏︙العضو : {["..data.first_name_.."](T.ME/"..data.username_..")}\n❏︙["..Essambot.."] \n") 
+send(msg.chat_id_,0,"❏︙العضو : {["..data.first_name_.."](T.ME/"..data.username_..")}\n❏︙["..BESSObot.."] \n") 
 else
-send(msg.chat_id_,0,"❏︙العضو : {["..data.first_name_.."](T.ME/EEl00 )}\n❏︙["..Essambot.."] \n") 
+send(msg.chat_id_,0,"❏︙العضو : {["..data.first_name_.."](T.ME/BESSO500K )}\n❏︙["..BESSObot.."] \n") 
 end
 end,nil)   
 DeleteMessage(msg.chat_id_,{[0] = data.message_id_}) 
